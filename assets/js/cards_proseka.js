@@ -19,35 +19,27 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-var ichikaCards = [];
-var neneCards = [];
-var ruiCards = [];
-var lukaCards = [];
-var meikoCards = [];
+var shihoCards = [];
+var honamiCards = [];
+var kanadeCards = [];
 var otherCards = [];
 var waifus = [];
 
 function startup() {
-  Papa.parse("https://koza.rip/assets/proseka_fav_card.csv", {
+  Papa.parse("https://svenxiety.xyz/assets/csv/proseka_fav_card.csv", {
     download: true,
     complete: function(results) {
       for (var i = 1; i < results.data.length; i++) {
 
         switch(results.data[i][0]) {
-          case 'Ichika':
-          ichikaCards.push(results.data[i][1]);
+          case 'Shiho':
+          shihoCards.push(results.data[i][1]);
           break;
-          case 'Nene':
-          neneCards.push(results.data[i][1]);
+          case 'Honami':
+          honamiCards.push(results.data[i][1]);
           break;
-          case 'Rui':
-          ruiCards.push(results.data[i][1]);
-          break;
-          case 'Luka':
-          lukaCards.push(results.data[i][1]);
-          break;
-          case 'MEIKO':
-          meikoCards.push(results.data[i][1]);
+          case 'Kanade':
+          kanadeCards.push(results.data[i][1]);
           break;
           case 'ProsekaOther':
           otherCards.push(results.data[i][1]);
@@ -55,7 +47,7 @@ function startup() {
         }
       }
       //console.log(hagumiCards);
-      waifus = [["Ichika", ichikaCards], ["Nene", neneCards], ["Rui", ruiCards], ["Luka", lukaCards], ["MEIKO", meikoCards], ["ProsekaOther", otherCards]];
+      waifus = [["Shiho", shihoCards], ["Honami", honamiCards], ["Kanade", kanadeCards], ["ProsekaOther", otherCards]];
 
       for (var i = 0; i < waifus.length; i++) {
         var waifuData = waifus[i];

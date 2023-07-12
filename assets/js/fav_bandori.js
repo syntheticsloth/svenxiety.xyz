@@ -29,7 +29,7 @@ var rasFav = [];
 var bands = [];
 
 function startup() {
-  Papa.parse("https://koza.rip/assets/bandori_fav.csv", {
+  Papa.parse("https://svenxiety.xyz/assets/csv/bandori_fav.csv", {
     download: true,
     complete: function(results) {
       //console.log("begin parsing csv");

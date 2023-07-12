@@ -19,31 +19,27 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-var hagumiCards = [];
-var kanonCards = [];
-var nanamiCards = [];
-var yukiLisaCards = [];
+var layerCards = [];
+var ranCards = [];
+var taeCards = [];
 var otherCards = [];
 var waifus = [];
 
 function startup() {
-  Papa.parse("https://koza.rip/assets/bandori_fav_card.csv", {
+  Papa.parse("https://svenxiety.xyz/assets/csv/bandori_fav_card.csv", {
     download: true,
     complete: function(results) {
       for (var i = 1; i < results.data.length; i++) {
 
         switch(results.data[i][0]) {
-          case 'Hagumi':
-          hagumiCards.push(results.data[i][1]);
+          case 'LAYER':
+          layerCards.push(results.data[i][1]);
           break;
-          case 'Kanon':
-          kanonCards.push(results.data[i][1]);
+          case 'Ran':
+          ranCards.push(results.data[i][1]);
           break;
-          case 'Nanami':
-          nanamiCards.push(results.data[i][1]);
-          break;
-          case 'YukiLisa':
-          yukiLisaCards.push(results.data[i][1]);
+          case 'Tae':
+          taeCards.push(results.data[i][1]);
           break;
           case 'BandoriOther':
           otherCards.push(results.data[i][1]);
@@ -51,7 +47,7 @@ function startup() {
         }
       }
       //console.log(hagumiCards);
-      waifus = [["Hagumi", hagumiCards], ["Kanon", kanonCards], ["Nanami", nanamiCards], ["YukiLisa", yukiLisaCards], ["BandoriOther", otherCards]];
+      waifus = [["LAYER", layerCards], ["Ran", ranCards], ["Tae", taeCards], ["BandoriOther", otherCards]];
 
       for (var i = 0; i < waifus.length; i++) {
         var waifuData = waifus[i];

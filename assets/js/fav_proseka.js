@@ -26,7 +26,7 @@ var wxsFav = [];
 var niigoFav = [];
 
 function startup() {
-  Papa.parse("https://koza.rip/assets/proseka_fav.csv", {
+  Papa.parse("https://svenxiety.xyz/assets/csv/proseka_fav.csv", {
     download: true,
     complete: function(results) {
       for (var i = 1; i < results.data.length; i++) {
