@@ -1,0 +1,28 @@
+div > div.bg.sib.hero-component--fixed-background {
+  background-image: url(assets/sven.png);
+  background-color: #550527;
+  background-position: left bottom;
+  background-size: contain;
+}
+
+div.hero-component--content {
+  text-align: center;
+}
+
+div > div.hero-component--content > div.h-font.h1 > div > span {
+  font-size: 60px;
+  background-color: initial;
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(0 0 0 / 50%) 0px 2px 6px;
+  font-family: "Nothing You Could Do";
+}
+
+div > div.hero-component--content > div.h3.body-text > div > span {
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(0 0 0 / 50%) 0px 2px 6px;
+  font-family: Play;
+}
+
+div.photogrid-component--flexbox-container>a>div {
+  background-position: center;
+}
