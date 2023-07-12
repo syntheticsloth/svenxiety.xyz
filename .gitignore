@@ -1,4 +1,4 @@
 # ignore all image files
-assets/*.png
-assets/*.jpg
-assets/*.webp
+*.png
+*.jpg
+*.webp
