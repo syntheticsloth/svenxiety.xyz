@@ -46,7 +46,7 @@ body {
 .hero {
   min-height: initial;
   height: calc(100vh);
-  background: url(../img/koza.png) right no-repeat #c46b9b;
+  background: url(../img/sven.png) right no-repeat #c46b9b;
   background-size: contain;
 }
 
